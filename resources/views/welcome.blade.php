@@ -27,6 +27,15 @@
                 font-size: 5em;
             }
 
+            .homebtn{
+                box-shadow: 5px 5px 5px #000;
+                 width: 90%;
+                  height: 3.5em;
+                  margin: .75em;
+                  padding: 0;
+
+            }
+
 /*            .full-height {
                 height: 100vh;
             }
@@ -75,69 +84,24 @@
     <div class="container text-center">
         <h1>St Paul learning Center</h1>
     <div class="col-md-12" style="padding: 0; margin: 0; border: 0; border: 2px solid black; box-shadow: 10px 10px 5px #000; min-height: 25em; background-color: #1A8BCB">
-{{--     <button class="btn-danger">fubar</button>
-    <button class="btn-primary">foo</button>
-    <button class="btn-default">bar</button>
-    <button class="btn-success">Elliott</button>
-    <button class="btn-info">Grace</button>
-    <button class="btn-warning">Fraiser</button> --}}
-      <div class="col-md-2" style="background-color: #1A8BCB; min-height: 25em; padding: 0; margin: 0; border: 0">
 
-   
+      <div class="col-md-2" style="background-color: #1A8BCB; min-height: 25em; padding: 0; margin: 0; border: 0">   
         <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-primary" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">About Us</button>                   
+          <button class="btn-primary homebtn">About Us</button>
+          <button class="btn-danger homebtn">News</button>
+          <button class="btn-success homebtn">Calendar</button>
+          <button class="btn-info homebtn">Meal Menu</button>
+          <button class="btn-warning homebtn">Photo Gallery</button>
+          <button class="btn-primary homebtn">Handbook/Forms</button>
+          <button class="btn-danger homebtn">Admission/Tuition</button>
+          <button class="btn-success homebtn">Curriculum</button>
+          <button class="btn-info homebtn">Employment Opportuninity</button>
+          <button class="btn-warning homebtn">Giving Opportunity</button>               
         </div>
-
-        <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-danger" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">News</button>                   
-        </div>
-
-{{--         <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-default" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div> --}}
-
-        <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-success" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div>
-
-        <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-info" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div>
-
-        <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-warning" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div>
-                <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-primary" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div>
-
-        <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-danger" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div>
-
-{{--         <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-default" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div> --}}
-
-        <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-success" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div>
-
-        <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-info" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div>
-
-        <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-warning" style="box-shadow: 5px 5px 5px #000; width: 150px; height: 50px">fubar</button>                   
-        </div>
+      </div>
 
 
-
-
-    </div>
-
-
-        <div class="col-md-10" style="background-color: #1A8BCB; height: 100%">
+        <div class="col-md-10" style=" background-color: #1A8BCB; height: 100%">
                         <div class="col-md-12" style="background-color: #1A8BCB; padding: 0; margin: 0; border: 0"> 
           <div class="col-md-11 " style="background-color: yellow; min-height: 5em; border: 2px solid black; margin: 10px; box-shadow: 5px 5px 5px #000;">            
           </div>           
