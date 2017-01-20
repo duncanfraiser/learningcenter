@@ -1,168 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-         <link href="{{asset('css/bootstrap-theme.min.css')}}" rel="stylesheet">
-         <script src="{{ asset('js/jquery.min.js') }}"></script>
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #000;
-                font-family: 'Raleway', sans-serif;
-/*                font-weight: 100;
-                height: 100vh;
-                margin: 0;*/
-            }
-            h1 {
-                font-size: 5em;
-            }
-
-            .homebtn{
-                box-shadow: 5px 5px 5px #000;
-                 width: 90%;
-                  height: 3.5em;
-                  margin: .75em;
-                  padding: 0;
-
-            }
-
-/*            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }*/
-        </style>
-    </head>
-    <body>
-        
-    <div class="container text-center">
-        <h1>St Paul learning Center</h1>
+@extends('layouts.template')
+@section('content')      
+<div class="container">
+        <div  class='col-md-12' style='margin-bottom: 0'>
+            <div class='col-md-2' style="padding: 0">
+                <img style="width: 100%" src="{{url('/img/lclogo.png')}}">
+            </div>
+            <div class='col-md-10'>
+              <h1><center>St. Paul Learning Center</center></h1>  
+            </div>
+        </div>
+       
     <div class="col-md-12" style="padding: 0; margin: 0; border: 0; border: 2px solid black; box-shadow: 10px 10px 5px #000; min-height: 25em; background-color: #1A8BCB">
 
       <div class="col-md-2" style="background-color: #1A8BCB; min-height: 25em; padding: 0; margin: 0; border: 0">   
-        <div class="col-md-12" style="background-color: #1A8BCB; padding: 10px; margin: 0; border: 0"> 
-          <button class="btn-primary homebtn">About Us</button>
-          <button class="btn-danger homebtn">News</button>
-          <button class="btn-success homebtn">Calendar</button>
-          <button class="btn-info homebtn">Meal Menu</button>
-          <button class="btn-warning homebtn">Photo Gallery</button>
-          <button class="btn-primary homebtn">Handbook/Forms</button>
-          <button class="btn-danger homebtn">Admission/Tuition</button>
-          <button class="btn-success homebtn">Curriculum</button>
-          <button class="btn-info homebtn">Employment Opportuninity</button>
-          <button class="btn-warning homebtn">Giving Opportunity</button>               
-        </div>
+        @include('_includes.pagebtns')
       </div>
 
 
-        <div class="col-md-10" style=" background-color: #1A8BCB; height: 100%">
-                        <div class="col-md-12" style="background-color: #1A8BCB; padding: 0; margin: 0; border: 0"> 
-          <div class="col-md-11 " style="background-color: yellow; min-height: 5em; border: 2px solid black; margin: 10px; box-shadow: 5px 5px 5px #000;">            
-          </div>           
-        </div>
-        </div>
-
-      </div>  
+        <div class="col-md-10" style=" background-color: #1A8BCB; height: 100%"> 
+          <div class="col-md-11" style="background-color: yellow; min-height: 5em; border: 2px solid black; margin: 10px; box-shadow: 5px 5px 5px #000;">
 
 
 
+            {{-- START Carousel Code --}}
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox" style="margin: 1em; width: 96%; border: 2px solid black">
+                        <div class="item active">
+                            <img src="{{url('img/splcgroup.png')}}" alt="St Paul Learning Center">  
+                        </div>
+                        <div class="item">
+                            <img src="{{url('img/splcgroup.png')}}" alt="St Paul Learning Center">     
+                        </div>
+                    </div>
 
-    </div>
-
-
-
-
-
-
-
-
-
-{{--     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+                <!-- Left and right controls -->
+                        <a class="left carousel-control" style="margin-left: .80em" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" style="margin-right: 1em" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
                 </div>
-            @endif
+                {{-- END Carousel Code --}}
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+
+
+
+          </div>
+
+
+           <div class="col-md-11" style="background-color: #337ab7; min-height: 5em; border: 2px solid black; margin: 10px; box-shadow: 5px 5px 5px #000;">
+              <h4 style="color: #fff; margin: 2em; text-align: left"> <span style="font-size: 125%">Welcome to the St. Paul Early Learning Center.</span><br/><br/> We hope you will enjoy viewing our site and will want to come visit us. It would be our pleasure to schedule a time for you to tour the Learning Center and experience the happy learning in all of our classrooms.<br/><br/>Thank you for your interest in the St. Paul Early Learning Center and we look forward to meeting you soon.</h4><h4 style='color: #fff; text-align: right'>Jennifer Henry, Director<br/>Darlene Scanlon, Assistant Director</h4>
+          </div>
+
+
         </div>
-    </body> --}}
 
-
-
-    
-
-
-
-
-
-
-
-
-    </body>
-
-</html>
+    </div>  
+</div>
+@stop
