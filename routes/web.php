@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index');
 Route::resource('/about', 'AboutController');
 Route::resource('/admission', 'AdmissionController');
 Route::resource('/curriculum', 'CurriculumController');
+Route::resource('/photos', 'PhotoController');
