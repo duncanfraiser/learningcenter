@@ -23,3 +23,4 @@ Route::resource('/admission', 'AdmissionController');
 Route::resource('/curriculum', 'CurriculumController');
 Route::resource('/photos', 'PhotoController');
 Route::resource('/meals', 'MealController');
+Route::resource('/news', 'NewsController');
