@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\About;
 
 class AboutController extends Controller
 {
@@ -13,7 +13,8 @@ class AboutController extends Controller
      */
     public function index()
     {
-        return view('about.index');
+        $about = About::FindOrFail(1);
+        return view('about.index', compact('about'));
     }
 
     /**
@@ -23,7 +24,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        //
+        return view('about.create');
     }
 
     /**
@@ -34,7 +35,10 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $about = new About;
+        $about->fill($request->all());
+        $about->save();
+        return redirect('/about');
     }
 
     /**

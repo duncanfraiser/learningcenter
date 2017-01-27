@@ -11,13 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
+Route::resource('/home', 'HomeController');
 Route::resource('/about', 'AboutController');
 Route::resource('/admission', 'AdmissionController');
 Route::resource('/curriculum', 'CurriculumController');

@@ -1,0 +1,56 @@
+html, body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+.homebtn{
+  box-shadow: 5px 5px 5px #000;
+  width: 90%;
+  height: 3.5em;
+  margin: .75em;
+  padding: 0;
+}
+
+.person {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
+  opacity: 0.7;
+}
+            
+.person:hover {
+  border-color: #f1f1f1;
+}
+
+table {
+ /*   font-family: arial, sans-serif;*/
+  border-collapse: collapse;
+  width: 100%;
+  table-layout:fixed;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.pagedata{
+  margin: 2em;
+  color:#fff;
+  min-height: 5em;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 0em 2em;
+  box-shadow: 5px 5px 5px #000;
+}  
