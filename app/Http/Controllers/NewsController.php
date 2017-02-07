@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\News;
 
 class NewsController extends Controller
 {
@@ -13,7 +14,9 @@ class NewsController extends Controller
      */
     public function index()
     {
-        return view('news.index');
+        $news = News::all()->last();
+
+        return view('news.index', compact('news'));
     }
 
     /**
@@ -34,7 +37,16 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // The storeAs() is defaulted to save in storage/app/public/pics (I added the pics extintion), to make the stored files accesable to the public you have to use the php artisan storage:link to Create a symbolic link from "public/storage" to "storage/app/public" then you can source an image as follows kennykens.df.ercorr.com/storage/pics/hoth.jpg. The storAs() passes 2 arguments (path,filename) methods are located on UploadedFile.php;
+        $pic = request()->file('picture');
+        $pic->storeAs('public/pics', $pic->getClientOriginalName());
+        $news = new News;
+        // $photo->title = $request->title;
+        $news->img = $pic->getClientOriginalName();
+
+        $news->save();
+
+        return redirect('news');
     }
 
     /**

@@ -25,3 +25,4 @@ Route::resource('/curriculum', 'CurriculumController');
 Route::resource('/photos', 'PhotoController');
 Route::resource('/meals', 'MealController');
 Route::resource('/news', 'NewsController');
+Route::resource('/calendar', 'CalendarController');
