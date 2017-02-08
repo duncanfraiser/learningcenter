@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use App\About;
 
-class AboutController extends Controller
+use Illuminate\Http\Request;
+
+class GiveController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,7 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $about = About::FindOrFail(2);
-        return view('about.index', compact('about'));
+        return view('give.index');
     }
 
     /**
@@ -24,7 +23,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        return view('about.create');
+        //
     }
 
     /**
@@ -35,10 +34,7 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        $about = new About;
-        $about->fill($request->all());
-        $about->save();
-        return redirect('/about');
+        //
     }
 
     /**
@@ -59,8 +55,8 @@ class AboutController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {   $about = About::findOrFail($id);
-        return view('about.edit');
+    {
+        //
     }
 
     /**

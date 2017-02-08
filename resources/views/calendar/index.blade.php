@@ -5,3 +5,8 @@
         <img width="100%" style="margin-bottom: 2em; border: 2px solid black; box-shadow: 5px 5px 5px #000;" src="{{url('storage/pics/'.$calendar->img)}}">
     </div>  
 @stop
+
+
+
+
+      

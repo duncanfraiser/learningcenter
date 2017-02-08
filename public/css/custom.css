@@ -55,11 +55,41 @@ td, th {
 }
 
 .pagedata{
-  margin: 2em;
+  margin: 2em 2em 5em 2em;
   color:#fff;
   min-height: 5em;
   border: 2px solid black;
-  margin: 10px;
+
   padding: 0em 2em;
   box-shadow: 5px 5px 5px #000;
 }  
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.name{
+
+font-family: 'PT Sans', sans-serif;
+  font-size: 4.2em;
+}
+
+@media screen and (max-width: 600px) {
+  #slidder {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}

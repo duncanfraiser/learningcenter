@@ -1,4 +1,4 @@
-          <div class="col-md-11" style="background-color: yellow; min-height: 5em; border: 2px solid black; margin: 10px; box-shadow: 5px 5px 5px #000;">
+          <div id="slidder" class="col-md-11" style="background-color: yellow; min-height: 5em; border: 2px solid black; margin: 2em 2em 0em 2em; box-shadow: 5px 5px 5px #000;">
             {{-- START Carousel Code --}}
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->

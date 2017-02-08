@@ -26,3 +26,6 @@ Route::resource('/photos', 'PhotoController');
 Route::resource('/meals', 'MealController');
 Route::resource('/news', 'NewsController');
 Route::resource('/calendar', 'CalendarController');
+Route::resource('/handbook', 'HandbookController');
+Route::resource('/employment', 'EmploymentController');
+Route::resource('/give', 'GiveController');
