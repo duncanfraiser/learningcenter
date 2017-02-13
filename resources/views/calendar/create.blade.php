@@ -8,9 +8,9 @@
           {{ Form::file('picture')}}
           </div>
           <div class="form-group" style="float: right">
-            <a  href="{{url('/')}}"><BUTTON class="btn btn-secondary">Cancel</BUTTON></a>
-          {{Form::submit('Upload Photo', ['class' => 'btn btn-primary'])}}
+          {{Form::submit('Upload Photo', ['class' => 'btn-primary formbtn'])}}
           </div>
       {{Form::close()}}
+      <a style="float: right" href="{{ URL::previous() }}"><BUTTON class="btn-default formbtn">Cancel</BUTTON></a>
   </div>  
 @stop

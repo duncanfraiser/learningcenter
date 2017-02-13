@@ -14,7 +14,7 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-         <link rel="stylesheet" href="{{ asset('css/custom.css') }}?1">
+         <link rel="stylesheet" href="{{ asset('css/custom.css') }}?5">
          @include('_includes.froala.froala-css')
 </head>
 <body>
@@ -24,7 +24,8 @@
           <a href="{{url('/')}}"><img style="width: 100%" src="{{url('/img/lclogo.png')}}"></a>
         </div>
         <div class='col-md-10' style="padding-top: 3em">
-          <h1 class="name"><center>St. Paul Early Learning Center</center></h1>  
+          <h1 class="name"><center>St. Paul Early Learning Center</center></h1> 
+
         </div>
     </div>
     

@@ -12,8 +12,8 @@
           {{Form::textarea('body', null, ['class' => 'form-control'])}}
         </div>
         <div class="form-group" style="float: right">
-          <button class="btn-default">Cancel<a href="/"></a></button>
-          {{Form::submit('Update', ['class' => 'btn-primary'])}}
+         <a style="float: right" href="{{ URL::previous() }}"><BUTTON class="btn-default formbtn">Cancel</BUTTON></a>
+          {{Form::submit('Update', ['class' => 'btn-primary formbtn'])}}
         </div> 
       {{Form::close()}}
   </div>  

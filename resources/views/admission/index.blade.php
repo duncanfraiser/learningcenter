@@ -1,6 +1,9 @@
 @extends('layouts.template')
 @section('content')      
     <div class="col-md-11 pagedata" style=" background-color:  #d9534f;">
+      @if(\Auth::Check())
+        <a href="{{url('/abmission/create')}}"><button class="btn-danger adminbtn">Edit</button></a>
+      @endif
  		<h2>2016-2017 TUITION & FEE SCHEDULE</h2>
 			<h3>Effective July 1, 2017:</h3>
 			<h3>Registration Fee</h3>

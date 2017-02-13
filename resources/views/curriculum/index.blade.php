@@ -1,6 +1,9 @@
 @extends('layouts.template')
 @section('content')      
     <div class="col-md-11 pagedata" style=" background-color: #4cae4c;">
+      @if(\Auth::Check())
+        <a href="{{url('/news/create')}}"><button class="btn-danger adminbtn">Edit</button></a>
+      @endif
        <h2>Curriculum</h2>
 			<p>
 			St. Paul Learning Center has nine classrooms:  Infant Room, Older Infant Room, Creeper Room, Toddler Room, Young Two Room, Older Two Room, Young Three Room, Older Three Room, and the Pre-school Room. Our philosophy is to teach the whole child. 

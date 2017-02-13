@@ -15,16 +15,24 @@ h2 {
 .homebtn{
   box-shadow: 5px 5px 5px #000;
   width: 90%;
-  height: 3.5em;
+  height: 3em;
   margin: .75em;
   padding: 0;
+}
+
+.adminbtn{
+  box-shadow: 5px 5px 5px #000;
+  margin: .75em;
+  position: absolute;
+  top: .5em;
+  right: .75em;
 }
 
 .formbtn{
   box-shadow: 5px 5px 5px #000;
   width: 8em;
   height: 2em;
-  margin: .75em;
+  margin: .5em;
   padding: 0;
 }
 
@@ -93,3 +101,5 @@ font-family: 'PT Sans', sans-serif;
     display: none;
   }
 }
+
+
