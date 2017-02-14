@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Curriculum;
 
 class CurriculumController extends Controller
 {
@@ -13,7 +14,8 @@ class CurriculumController extends Controller
      */
     public function index()
     {
-        return view('curriculum.index');
+        $curriculum = Curriculum::all()->last();
+        return view('curriculum.index', compact('curriculum'));
     }
 
     /**
@@ -23,7 +25,7 @@ class CurriculumController extends Controller
      */
     public function create()
     {
-        //
+        return view('curriculum.create');
     }
 
     /**
@@ -34,7 +36,10 @@ class CurriculumController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $curriculum = New Curriculum;
+        $curriculum->fill($request->all());
+        $curriculum->save();
+        return redirect('/curriculum');
     }
 
     /**
@@ -56,7 +61,8 @@ class CurriculumController extends Controller
      */
     public function edit($id)
     {
-        //
+        $curriculum=Curriculum::findOrFail($id);
+        return view('curriculum.edit', compact('curriculum'));
     }
 
     /**
@@ -68,7 +74,10 @@ class CurriculumController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $curriculum = Curriculum::findOrFail($id);
+        $curriculum->fill($request->all());
+        $curriculum->save();
+        return redirect('/curriculum');
     }
 
     /**

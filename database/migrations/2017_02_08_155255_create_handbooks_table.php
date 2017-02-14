@@ -13,7 +13,14 @@ class CreateHandbooksTable extends Migration
      */
     public function up()
     {
-        //
+            Schema::create('handbooks', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->string('handbook');
+            $table->softDeletes();
+            $table->rememberToken();
+            $table->timestamps();
+        }); 
     }
 
     /**
@@ -23,6 +30,6 @@ class CreateHandbooksTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('handbooks');
     }
 }

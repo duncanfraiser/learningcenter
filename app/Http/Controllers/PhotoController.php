@@ -68,7 +68,8 @@ class PhotoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $photo=Photo::findOrFail($id);
+        return view('photo.edit', compact('photo'));
     }
 
     /**
@@ -80,7 +81,15 @@ class PhotoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $photo = Photo::findOrFail($id);
+        $photo->title=$request->title;
+        $pic = request()->file('picture');
+        if($pic != null){
+        $pic->storeAs('public/pics', $pic->getClientOriginalName()); 
+        $photo->pic = $pic->getClientOriginalName();
+        }
+        $photo->save();
+        return redirect('/photos');
     }
 
     /**
@@ -91,6 +100,8 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $photo = Photo::findOrFail($id);
+        $photo->delete();
+        return redirect('/photos');
     }
 }

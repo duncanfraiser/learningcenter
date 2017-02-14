@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('content')      
-    <div class="col-md-11 pagedata" style=" background-color: #f0ad4e;">
+    <div class="col-md-11 pagedata" style=" background-color: #ec971f;">
       @if(\Auth::Check())
         <a href="{{url('/photos/create')}}"><button class="btn-danger adminbtn">Add Photo</button></a>
       @endif

@@ -12,5 +12,6 @@
           </div>
       {{Form::close()}}
       <a style="float: right" href="{{ URL::previous() }}"><BUTTON class="btn-default formbtn">Cancel</BUTTON></a>
+      
   </div>  
 @stop

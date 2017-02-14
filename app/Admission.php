@@ -4,11 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Give extends Model
+class Admission extends Model
 {
-      		protected $fillable = [
-      		'body',
+      protected $fillable = [
    			'title',
-            'doc'
+            'body'
         ];
 }

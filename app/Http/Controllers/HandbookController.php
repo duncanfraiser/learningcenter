@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Handbook;
 
 class HandbookController extends Controller
 {
@@ -13,7 +14,8 @@ class HandbookController extends Controller
      */
     public function index()
     {
-        return view('handbook.index');
+        $handbooks=Handbook::get();
+        return view('handbook.index', compact('handbooks'));
     }
 
     /**
@@ -23,7 +25,7 @@ class HandbookController extends Controller
      */
     public function create()
     {
-        //
+        return view('handbook.create');
     }
 
     /**
@@ -34,7 +36,15 @@ class HandbookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pic = request()->file('handbook');
+        $pic->storeAs('public/files', $pic->getClientOriginalName());
+        $handbook = new Handbook;
+        $handbook->title = $request->title;
+        $handbook->handbook = $pic->getClientOriginalName();
+
+        $handbook->save();
+
+        return redirect('handbook');
     }
 
     /**
@@ -56,7 +66,8 @@ class HandbookController extends Controller
      */
     public function edit($id)
     {
-        //
+        $handbook=Handbook::findOrFail($id);
+        return view('handbook.edit', compact('handbook'));
     }
 
     /**
@@ -68,7 +79,15 @@ class HandbookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $handbook = Handbook::findOrFail($id);
+        $handbook->title=$request->title;
+        $pic = request()->file('handbook');
+        if($pic != null){
+        $pic->storeAs('public/files', $pic->getClientOriginalName()); 
+        $handbook->handbook = $pic->getClientOriginalName();
+        }
+        $handbook->save();
+        return redirect('/handbook');
     }
 
     /**
@@ -79,6 +98,8 @@ class HandbookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $handbook = Handbook::findOrFail($id);
+        $handbook->delete();
+        return redirect('/handbook');
     }
 }

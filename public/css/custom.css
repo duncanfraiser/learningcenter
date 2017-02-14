@@ -15,7 +15,7 @@ h2 {
 .homebtn{
   box-shadow: 5px 5px 5px #000;
   width: 90%;
-  height: 3em;
+  height: 3.25em;
   margin: .75em;
   padding: 0;
 }
@@ -67,8 +67,15 @@ td, th {
   color:#fff;
   min-height: 5em;
   border: 2px solid black;
-
   padding: 0em 2em;
+  box-shadow: 5px 5px 5px #000;
+}  
+.slidderdiv{
+  margin: 2em 2em 1em 2em;
+  color:#fff;
+  min-height: 5em;
+  border: 2px solid black;
+  padding: 0em 0em;
   box-shadow: 5px 5px 5px #000;
 }  
 

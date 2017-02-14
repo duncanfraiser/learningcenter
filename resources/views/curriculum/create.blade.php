@@ -1,8 +1,8 @@
 @extends('layouts.template')
-@section('content')      
-  <div class="col-md-11 pagedata" style=" background-color: #1A8BCB;">
-      <h3>Edit About Page Content</h3>
-      {{Form::model($about, ['method' => 'PATCH', 'action' => ['AboutController@update', $about->id]])}}
+@section('content')
+  <div class="col-md-11 pagedata" style=" background-color:#4cae4c;">
+      <h3>Create Curriculum Page Content</h3>
+        {{Form::open(['action' => 'CurriculumController@store'])}}
     	  <div class="form-group">
 			{{Form::label('title', 'Page Header:')}}
 			{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter Page Header'])}}
@@ -12,12 +12,11 @@
 			{{Form::textarea('body', null, ['class' => 'form-control'])}}
   		  </div>
 	      <div class="form-group" style="float: right">
-
+       		<button class="btn-default formbtn">Cancel<a href="/"></a></button>
             {{Form::submit('Update', ['class' => 'btn-primary formbtn'])}}
-          </div> 
+          </div>
 	    {{Form::close()}}
-            <a style="float: right" href="{{ URL::previous() }}"><BUTTON class="btn-default formbtn">Cancel</BUTTON></a>
-  </div>  
+  </div>
 @stop
 @section('scripts')
     @include('_includes.froala.froala-js')

@@ -13,7 +13,7 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $about = About::FindOrFail(2);
+        $about = About::all()->last();
         return view('about.index', compact('about'));
     }
 
@@ -59,8 +59,9 @@ class AboutController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {   $about = About::findOrFail($id);
-        return view('about.edit');
+    {   
+        $about = About::findOrFail($id);
+        return view('about.edit', compact('about'));
     }
 
     /**
@@ -72,7 +73,10 @@ class AboutController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $about = About::findOrFail($id);
+        $about->fill($request->all());
+        $about->save();
+        return redirect('/about');    
     }
 
     /**

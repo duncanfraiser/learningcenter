@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Admission;
 
 class AdmissionController extends Controller
 {
@@ -13,8 +14,8 @@ class AdmissionController extends Controller
      */
     public function index()
     {
-       
-            return view('admission.index');
+            $admission= Admission::all()->last();
+            return view('admission.index', compact('admission'));
     }
 
     /**
@@ -24,7 +25,8 @@ class AdmissionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admission.create');
+
     }
 
     /**
@@ -35,7 +37,10 @@ class AdmissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $admission = New Admission;
+        $admission->fill($request->all());
+        $admission->save();
+        return redirect('/admission');
     }
 
     /**
@@ -57,7 +62,8 @@ class AdmissionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $admission=Admission::findOrFail($id);
+        return view('admission.edit', compact('admission'));
     }
 
     /**
@@ -69,7 +75,10 @@ class AdmissionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $admission = Admission::findOrFail($id);
+        $admission->fill($request->all());
+        $admission->save();
+        return redirect('/admission');
     }
 
     /**

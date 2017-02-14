@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Give;
 
 class GiveController extends Controller
 {
@@ -13,7 +14,8 @@ class GiveController extends Controller
      */
     public function index()
     {
-        return view('give.index');
+        $give = Give::all()->last();
+        return view('give.index', compact('give'));
     }
 
     /**
@@ -23,7 +25,7 @@ class GiveController extends Controller
      */
     public function create()
     {
-        //
+        return view('give.create');
     }
 
     /**
@@ -34,7 +36,14 @@ class GiveController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pic = request()->file('doc');
+        $pic->storeAs('public/files', $pic->getClientOriginalName());
+        $give = new Give;
+        $give->body = $request->body;
+        $give->title = $request->title;
+        $give->doc = $pic->getClientOriginalName();
+        $give->save();
+        return redirect('give');
     }
 
     /**
@@ -56,7 +65,8 @@ class GiveController extends Controller
      */
     public function edit($id)
     {
-        //
+        $give = Give::findOrFail($id);
+        return view('give.edit', compact('give'));
     }
 
     /**
@@ -68,7 +78,16 @@ class GiveController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $give = Give::findOrFail($id);
+        $give->body=$request->body;
+        $give->title=$request->title;
+        $pic = request()->file('doc');
+        if($pic != null){
+        $pic->storeAs('public/files', $pic->getClientOriginalName()); 
+        $give->doc = $pic->getClientOriginalName();
+        }
+        $give->save();
+        return redirect('give');
     }
 
     /**
