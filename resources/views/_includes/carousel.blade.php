@@ -4,13 +4,13 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" style="margin: 0em; width: 100%;">
       <div class="item active">
-        <img width="100%" src="{{url('img/family.jpeg')}}" alt="St Paul Learning Center">  
+        <img width="100%" src="{{url('img/family.png')}}" alt="St Paul Learning Center">  
       </div>
       <div class="item">
-        <img width="100%" src="{{url('img/bryant.jpeg')}}" alt="St Paul Learning Center">     
+        <img width="100%" src="{{url('img/bryant.png')}}" alt="St Paul Learning Center">     
       </div>
       <div class="item">
-        <img width="100%" src="{{url('img/breast-cancer.jpeg')}}" alt="St Paul Learning Center">   
+        <img width="100%" src="{{url('img/breast-cancer.png')}}" alt="St Paul Learning Center">   
       </div>
     </div>
     <!-- Left and right controls -->
