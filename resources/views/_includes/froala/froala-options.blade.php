@@ -4,6 +4,7 @@
     // removed options from the toolbar----'insertImage', 'insertVideo', 'insertFile',
     $('#body').froalaEditor({
       toolbarButtons: ['undo', 'redo', 'html', '-', 'fontSize', 'paragraphFormat', 'align', 'quote', '|', 'formatOL', 'formatUL', '|', 'bold', 'italic', 'underline', '|', 'insertLink',  'insertTable'],
+      toolbarSticky: false,
       heightMin: 300,
       imageMove: true,
       imageUploadParam: 'image',
