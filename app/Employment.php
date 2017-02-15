@@ -23,7 +23,6 @@ class Employment extends Model
             'position',
             'salary',
             'available',
-            'available',
             'days-hours',
       		'sname',
       		'employed',

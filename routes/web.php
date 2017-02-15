@@ -27,5 +27,8 @@ Route::resource('/meals', 'MealController');
 Route::resource('/news', 'NewsController');
 Route::resource('/calendar', 'CalendarController');
 Route::resource('/handbook', 'HandbookController');
+
 Route::resource('/employment', 'EmploymentController');
+Route::get('/employment/{id}/thanks', 'EmploymentController@thanks');
+
 Route::resource('/give', 'GiveController');

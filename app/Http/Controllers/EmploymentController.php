@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Employment;
 
 class EmploymentController extends Controller
 {
@@ -34,8 +35,13 @@ class EmploymentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $employee = new Employment;
+        $employee->fill($request->all());
+        $employee->save();
+        return redirect('/employment/'.$employee->id.'/thanks');
     }
+
+
 
     /**
      * Display the specified resource.
@@ -45,7 +51,8 @@ class EmploymentController extends Controller
      */
     public function show($id)
     {
-        //
+        $employee = Employment::findOrFail($id);
+        return view('employment.show', compact('employee'));
     }
 
     /**
@@ -81,4 +88,12 @@ class EmploymentController extends Controller
     {
         //
     }
+
+    public function thanks($id)
+    {
+        $employee = Employment::findOrFail($id);
+        return view('employment.thanks', compact('employee'));
+    }
+
+
 }
