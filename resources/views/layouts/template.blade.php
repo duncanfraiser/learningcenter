@@ -15,35 +15,35 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-         <link rel="stylesheet" href="{{ asset('css/custom.css') }}?2">
+         <link rel="stylesheet" href="{{ asset('css/custom.css') }}?3">
          @include('_includes.froala.froala-css')
 </head>
 <body>
 <div class="container">
     <div  class='col-md-12' style='margin-bottom: 0'>
         <div class='col-md-2' style="padding: 0">
-          <a href="{{url('/')}}"><img style="width: 100%" src="{{url('/img/lclogo.png')}}"></a>
+          <a href="{{url('/')}}"><img class="logo" src="{{url('/img/lclogo.png')}}"></a>
         </div>
-        <div class='col-md-10' style="padding-top: 3em">
+        <div class='col-md-10 namediv'>
           <h1 class="name"><center>St. Paul Early Learning Center</center></h1> 
 
         </div>
     </div>
     
-    <div class="col-md-12" style="padding: 0; margin: 0; border: 2px solid black; box-shadow: 10px 10px 5px #000; min-height: 25em; background-color: #1A8BCB; margin-bottom: 5em">
+    <div class="col-md-12 bigdiv">
 
 
  <div class="row">
 
 
 
-<div class="col-md-10 col-md-push-2">
+<div class="col-md-10 col-md-push-2 mobilediv">
       <div class="col-md-12" style=" background-color: #1A8BCB; padding:0em; height: 100%">       
           @yield('content')
       </div>
       </div>
 
-      <div class="col-md-2 col-md-pull-10">
+      <div class="col-md-2 col-md-pull-10 mobilediv">
       @include('_includes.pagebtns')
       </div>
     

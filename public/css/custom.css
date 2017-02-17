@@ -3,7 +3,11 @@ html, body {
   color: #000;
   font-family: 'Raleway', sans-serif;
 }
-
+@media only screen and (max-width: 770px) {
+  html, body{
+font-family: 'PT Sans', sans-serif;
+  }
+}
 h1 {
   font-size: 5em;
 }
@@ -12,6 +16,19 @@ h2 {
   font-size: 3em;
 }
 
+@media only screen and (max-width: 770px) {
+  h2{
+  margin: 0;
+  padding: 1em 0 .25em 0;
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .mobilediv{
+padding: 0;
+  }
+}
 .homebtn{
   box-shadow: 5px 5px 5px #000;
   width: 90%;
@@ -19,6 +36,13 @@ h2 {
   margin: .75em;
   padding: 0;
 }
+@media only screen and (max-width: 770px) {
+  .homebtn{
+font-family: 'PT Sans', sans-serif;
+  }
+}
+
+
 
 .adminbtn{
   box-shadow: 5px 5px 5px #000;
@@ -62,6 +86,28 @@ td, th {
   padding: 8px;
 }
 
+.bigdiv{
+  padding: 0; 
+  margin: 0; 
+  border: 2px solid black; 
+  box-shadow: 10px 10px 5px #000; 
+  min-height: 25em; 
+  background-color: #1A8BCB; 
+  margin-bottom: 5em;
+}
+@media only screen and (max-width: 770px) {
+  .bigdiv{
+  padding: 0; 
+  margin: 0; 
+  border: none; 
+  box-shadow: none; 
+  min-height: 25em; 
+  background-color: #1A8BCB; 
+  margin-bottom: 5em;
+  }
+}
+
+
 .pagedata{
   margin: 2em 2em 5em 2em;
   color:#fff;
@@ -70,6 +116,18 @@ td, th {
   padding: 0em 2em;
   box-shadow: 5px 5px 5px #000;
 }  
+@media only screen and (max-width: 770px) {
+  .pagedata{
+  border: none;
+  padding: 1em 1em;
+  box-shadow: none;
+  margin: 0;
+  }
+}
+
+
+
+
 .slidderdiv{
   margin: 2em 2em 1em 2em;
   color:#fff;
@@ -93,10 +151,36 @@ td, th {
 }
 
 .name{
-
 font-family: 'PT Sans', sans-serif;
   font-size: 4.2em;
 }
+
+@media only screen and (max-width: 770px) {
+  .name{
+  font-size: 2.3em;
+  }
+}
+
+.namediv{
+padding-top: 3em;
+}
+
+@media only screen and (max-width: 770px) {
+  .namediv{
+padding-top: 0em;
+  }
+}
+.logo{
+ width: 100%;
+ margin-bottom: 0;
+}
+
+@media only screen and (max-width: 770px) {
+  .logo{
+ width: 100%;
+  }
+}
+
 
 @media screen and (max-width: 600px) {
   #slidder {
