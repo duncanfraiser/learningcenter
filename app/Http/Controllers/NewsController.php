@@ -68,7 +68,8 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $news=News::findOrFail($id);
+        return view('news.edit', compact('news'));
     }
 
     /**
@@ -80,7 +81,16 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $news = News::findOrFail($id);
+        $news->title=$request->title;
+        $news->body=$request->body;
+        $pic = request()->file('picture');
+        if($pic != null){
+        $pic->storeAs('public/pics', $pic->getClientOriginalName()); 
+        $news->img = $pic->getClientOriginalName();
+        }
+        $news->save();
+        return redirect('/news');
     }
 
     /**

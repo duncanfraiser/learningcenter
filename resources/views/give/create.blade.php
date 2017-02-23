@@ -4,10 +4,6 @@
       <h2>Create Giving Opportunity</h2>
       <div class='col-md-12' style="padding-bottom: 2em">    
 			{{Form::open(['action' => 'GiveController@store', 'files' => true])}}
-        <div class="form-group">
-          {{Form::label('body', 'Giving Opportunity Page Content:')}}
-          {{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Enter File Title'])}}
-          </div>
  				<div class="form-group">
 					{{Form::label('title', 'File Title:')}}
 					{{Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Enter File Title'])}}

@@ -2,7 +2,7 @@
 @section('content')      
   <div class="col-md-11 pagedata" style=" background-color: #46b8da;">
     @if(\Auth::Check())
-      <a href="{{url('/news/create')}}"><button class="btn-danger adminbtn">Edit</button></a>
+      <a href="{{url('/employment/submission')}}"><button class="btn-danger adminbtn">Submissions</button></a>
     @endif
     <h2>Employment Opportunity</h2>
     <div class='col-md-10 col-md-offset-1' style="padding-bottom: 2em">    
@@ -38,8 +38,8 @@
 
           {{Form::label('social', 'Social Security Number:')}}
           {{Form::text('social', null, ['class' => 'form-control', 'placeholder' => 'Enter Social Security Number'])}}        
-          {{Form::label('marital-status', 'Marital Status:')}}
-          {{Form::text('marital-status', null, ['class' => 'form-control', 'placeholder' => 'Enter Marital Status'])}}
+          {{Form::label('marital_status', 'Marital Status:')}}
+          {{Form::text('marital_status', null, ['class' => 'form-control', 'placeholder' => 'Enter Marital Status'])}}
 
           {{Form::label('dependents', 'Number of Dependents:')}}
           {{Form::text('dependents', null, ['class' => 'form-control', 'placeholder' => 'Enter Number of Dependents'])}}
@@ -53,8 +53,8 @@
           {{Form::label('available', 'Dates Available for Work:')}}
           {{Form::text('available', null, ['class' => 'form-control', 'placeholder' => 'Enter Dates Available for Work'])}}
 
-          {{Form::label('days-hours', 'Days and hours you can work: ')}}
-          {{Form::textarea('days-hours', null, ['class' => 'form-control', 'placeholder' => 'Enter Days and hours you can work:'])}}
+          {{Form::label('days_hours', 'Days and hours you can work: ')}}
+          {{Form::textarea('days_hours', null, ['class' => 'form-control', 'placeholder' => 'Enter Days and hours you can work:'])}}
         </div>
 		<h3>Spouse Information</h3>		
         <div class="form-group">
@@ -72,11 +72,11 @@
         </div>
   		<h3>Emergency Contact Information</h3>		
         <div class="form-group">
-          {{Form::label('emergency-name', 'Enter Full Name of Spouce:')}}
-          {{Form::text('emergency-name', null, ['class' => 'form-control', 'placeholder' => 'Enter Full Name of Spouce'])}}		
+          {{Form::label('emergency_name', 'Enter Full Name:')}}
+          {{Form::text('emergency_name', null, ['class' => 'form-control', 'placeholder' => 'Enter Full Name'])}}		
           
-          {{Form::label('emergency-phone', 'Phone Number:')}}
-          {{Form::text('emergency-phone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}  
+          {{Form::label('emergency_phone', 'Phone Number:')}}
+          {{Form::text('emergency_phone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}  
 		</div>
   		<h3>Education Information</h3>		
         <div class="form-group">
@@ -94,56 +94,56 @@
 
         <h3>Work Experience</h3>		
         <div class="form-inline">
-          {{Form::label('1from', '1.) Date From:')}}
-          {{Form::text('1from', null, ['class' => 'form-control', 'placeholder' => 'Enter Date'])}} 
-          {{Form::label('1to', 'To:')}}
-          {{Form::text('1to', null, ['class' => 'form-control', 'placeholder' => 'Enter Date'])}} 
+          {{Form::label('onefrom', '1.) Date From:')}}
+          {{Form::text('onefrom', null, ['class' => 'form-control', 'placeholder' => 'Enter Date'])}} 
+          {{Form::label('oneto', 'To:')}}
+          {{Form::text('oneto', null, ['class' => 'form-control', 'placeholder' => 'Enter Date'])}} 
         </div>
         <div class="form-group">
-          {{Form::label('1position', 'Position:')}}
-          {{Form::text('1position', null, ['class' => 'form-control', 'placeholder' => 'Enter Position'])}}   
+          {{Form::label('oneposition', 'Position:')}}
+          {{Form::text('oneposition', null, ['class' => 'form-control', 'placeholder' => 'Enter Position'])}}   
 
-          {{Form::label('1employer', 'Employer:')}}
-          {{Form::text('1employer', null, ['class' => 'form-control', 'placeholder' => 'Enter Employer'])}}
+          {{Form::label('oneemployer', 'Employer:')}}
+          {{Form::text('oneemployer', null, ['class' => 'form-control', 'placeholder' => 'Enter Employer'])}}
 
-          {{Form::label('1address', 'Address:')}}
-          {{Form::text('1address', null, ['class' => 'form-control', 'placeholder' => 'Enter Address'])}}
+          {{Form::label('oneaddress', 'Address:')}}
+          {{Form::text('oneaddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Address'])}}
 
-          {{Form::label('1phone', 'Phone:')}}
-          {{Form::text('1phone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone'])}}
+          {{Form::label('onephone', 'Phone:')}}
+          {{Form::text('onephone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone'])}}
         
-          {{Form::label('1salary', 'Salary:')}}
-          {{Form::text('1salary', null, ['class' => 'form-control', 'placeholder' => 'Enter Salary'])}}
+          {{Form::label('onesalary', 'Salary:')}}
+          {{Form::text('onesalary', null, ['class' => 'form-control', 'placeholder' => 'Enter Salary'])}}
 
-          {{Form::label('1leaving', 'Reason for Leaving:')}}
-          {{Form::text('1leaving', null, ['class' => 'form-control', 'placeholder' => 'Enter Reason for Leaving'])}}
+          {{Form::label('oneleaving', 'Reason for Leaving:')}}
+          {{Form::text('oneleaving', null, ['class' => 'form-control', 'placeholder' => 'Enter Reason for Leaving'])}}
 
         </div>
 
         <div class="form-inline"><br/>
-          {{Form::label('2from', '2.) Date From:')}}
-          {{Form::text('2from', null, ['class' => 'form-control', 'placeholder' => 'Enter Date'])}} 
-          {{Form::label('2to', 'To:')}}
-          {{Form::text('2to', null, ['class' => 'form-control', 'placeholder' => 'Enter Date'])}} 
+          {{Form::label('twofrom', '2.) Date From:')}}
+          {{Form::text('twofrom', null, ['class' => 'form-control', 'placeholder' => 'Enter Date'])}} 
+          {{Form::label('twoto', 'To:')}}
+          {{Form::text('twoto', null, ['class' => 'form-control', 'placeholder' => 'Enter Date'])}} 
         </div>
         <div class="form-group">
-          {{Form::label('2position', 'Position:')}}
-          {{Form::text('2position', null, ['class' => 'form-control', 'placeholder' => 'Enter Position'])}}   
+          {{Form::label('twoposition', 'Position:')}}
+          {{Form::text('twoposition', null, ['class' => 'form-control', 'placeholder' => 'Enter Position'])}}   
 
-          {{Form::label('2employer', 'Employer:')}}
-          {{Form::text('2employer', null, ['class' => 'form-control', 'placeholder' => 'Enter Employer'])}}
+          {{Form::label('twoemployer', 'Employer:')}}
+          {{Form::text('twoemployer', null, ['class' => 'form-control', 'placeholder' => 'Enter Employer'])}}
 
-          {{Form::label('2address', 'Address:')}}
-          {{Form::text('2address', null, ['class' => 'form-control', 'placeholder' => 'Enter Address'])}}
+          {{Form::label('twoaddress', 'Address:')}}
+          {{Form::text('twoaddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Address'])}}
 
-          {{Form::label('2phone', 'Phone:')}}
-          {{Form::text('2phone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone'])}}
+          {{Form::label('twophone', 'Phone:')}}
+          {{Form::text('twophone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone'])}}
         
-          {{Form::label('2salary', 'Salary:')}}
-          {{Form::text('2salary', null, ['class' => 'form-control', 'placeholder' => 'Enter Salary'])}}
+          {{Form::label('twosalary', 'Salary:')}}
+          {{Form::text('twosalary', null, ['class' => 'form-control', 'placeholder' => 'Enter Salary'])}}
 
-          {{Form::label('2leaving', 'Reason for Leaving:')}}
-          {{Form::text('2leaving', null, ['class' => 'form-control', 'placeholder' => 'Enter Reason for Leaving'])}}
+          {{Form::label('twoleaving', 'Reason for Leaving:')}}
+          {{Form::text('twoleaving', null, ['class' => 'form-control', 'placeholder' => 'Enter Reason for Leaving'])}}
         </div>
 
         <h3>Other Experience</h3>
@@ -157,29 +157,29 @@
 
         <h3>References</h3>
         <div class="form-group">
-          {{Form::label('1ref', 'Give one work experience, one education and one character.  List NO relatives:')}}<br/>
-          {{Form::label('1ref', '1.) Full Name:')}}
-          {{Form::text('1ref', null, ['class' => 'form-control', 'placeholder' => 'Enter Full Name'])}}
-          {{Form::label('1refaddress', 'Address:')}}
-          {{Form::text('1refaddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Street, City, State, Zip'])}}
-          {{Form::label('1refphone', 'Phone Number:')}}
-          {{Form::text('1refphone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}
+          {{Form::label('oneref', 'Give one work experience, one education and one character.  List NO relatives:')}}<br/>
+          {{Form::label('oneref', '1.) Full Name:')}}
+          {{Form::text('oneref', null, ['class' => 'form-control', 'placeholder' => 'Enter Full Name'])}}
+          {{Form::label('onerefaddress', 'Address:')}}
+          {{Form::text('onerefaddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Street, City, State, Zip'])}}
+          {{Form::label('onerefphone', 'Phone Number:')}}
+          {{Form::text('onerefphone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}
         </div>
         <div class="form-group"><br/>
-          {{Form::label('2ref', '2.) Full Name:')}}
-          {{Form::text('2ref', null, ['class' => 'form-control', 'placeholder' => 'Enter Full Name'])}}
-          {{Form::label('2refaddress', 'Address:')}}
-          {{Form::text('2refaddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Street, City, State, Zip'])}}
-          {{Form::label('2refphone', 'Phone Number:')}}
-          {{Form::text('2refphone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}
+          {{Form::label('tworef', '2.) Full Name:')}}
+          {{Form::text('tworef', null, ['class' => 'form-control', 'placeholder' => 'Enter Full Name'])}}
+          {{Form::label('tworefaddress', 'Address:')}}
+          {{Form::text('tworefaddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Street, City, State, Zip'])}}
+          {{Form::label('tworefphone', 'Phone Number:')}}
+          {{Form::text('tworefphone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}
         </div>
         <div class="form-group"><br/>
-          {{Form::label('3ref', '3.) Full Name:')}}
-          {{Form::text('3ref', null, ['class' => 'form-control', 'placeholder' => 'Enter Full Name'])}}
-          {{Form::label('3refaddress', 'Address:')}}
-          {{Form::text('3refaddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Street, City, State, Zip'])}}
-          {{Form::label('3refphone', 'Phone Number:')}}
-          {{Form::text('3refphone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}
+          {{Form::label('threeref', '3.) Full Name:')}}
+          {{Form::text('threeref', null, ['class' => 'form-control', 'placeholder' => 'Enter Full Name'])}}
+          {{Form::label('threerefaddress', 'Address:')}}
+          {{Form::text('threerefaddress', null, ['class' => 'form-control', 'placeholder' => 'Enter Street, City, State, Zip'])}}
+          {{Form::label('threerefphone', 'Phone Number:')}}
+          {{Form::text('threerefphone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone Number'])}}
         </div>
         <h3>Reason for Applying</h3>
 		<div>

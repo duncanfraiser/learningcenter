@@ -14,8 +14,8 @@ class GiveController extends Controller
      */
     public function index()
     {
-        $give = Give::all()->last();
-        return view('give.index', compact('give'));
+        $gives = Give::get();
+        return view('give.index', compact('gives'));
     }
 
     /**
@@ -98,6 +98,8 @@ class GiveController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $give = Give::findOrFail($id);
+        $give->delete();
+        return redirect('/give');
     }
 }

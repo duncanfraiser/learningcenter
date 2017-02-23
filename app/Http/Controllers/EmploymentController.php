@@ -86,13 +86,21 @@ class EmploymentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $employee = Employment::findOrFail($id);
+        $employee->delete();
+        return redirect('/employment/submission');
     }
 
     public function thanks($id)
     {
         $employee = Employment::findOrFail($id);
         return view('employment.thanks', compact('employee'));
+    }
+
+    public function submission()
+    {
+        $employees = Employment::get();
+        return view('employment.submission', compact('employees'));
     }
 
 

@@ -18,6 +18,7 @@ class CreateGivesTable extends Migration
             $table->string('body');
             $table->string('title');
             $table->string('doc');
+            $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
         }); 

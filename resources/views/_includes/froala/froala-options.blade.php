@@ -7,6 +7,7 @@
       toolbarSticky: false,
       heightMin: 300,
       imageMove: true,
+      quickInsertButtons: false,
       imageUploadParam: 'image',
       imageUploadMethod: 'post',
       // Set the image upload URL.
