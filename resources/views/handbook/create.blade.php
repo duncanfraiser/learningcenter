@@ -13,10 +13,11 @@
 					{{ Form::file('handbook')}}
   				</div>
   				<div class="form-group" style="float: right">
-  					<a class="btn-secondary formbtn" href="{{url('/')}}">Cancel</a>
 					{{Form::submit('Upload File', ['class' => 'btn-primary formbtn'])}}
   				</div>
 			{{Form::close()}}
+     <a style="float: right" href="{{ URL::previous() }}"><BUTTON class="btn-default formbtn">Cancel</BUTTON></a>
+
 
       </div>
     </div>    

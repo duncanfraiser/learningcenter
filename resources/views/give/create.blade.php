@@ -21,7 +21,4 @@
       </div>
     </div>    
 @stop
-@section('scripts')
-    @include('_includes.froala.froala-js')
-  @include('_includes.froala.froala-options')
-@stop
+
