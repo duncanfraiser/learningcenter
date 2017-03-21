@@ -18,7 +18,7 @@
 {{--          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> --}}
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-        <link rel="stylesheet" href="{{ asset('css/custom.css') }}?4">
+        <link rel="stylesheet" href="{{ asset('css/custom.css') }}?5">
         @include('_includes.froala.froala-css')
 
 
@@ -49,6 +49,7 @@
 
 </head>
 <body>
+<div class="loader"></div>
 <div class="container">
     <div  class='col-md-12' style='margin-bottom: 0'>
         <div class='col-md-2' style="padding: 0">
@@ -86,6 +87,12 @@
 
     </div>
 </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+})
+</script>
   @yield('scripts')
 </body>
 </html>
